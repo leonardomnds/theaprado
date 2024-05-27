@@ -3,8 +3,11 @@
 
   min-height: 300px;
 
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  position: relative;
 
   transition: transform var(--tempo-transicao);
 

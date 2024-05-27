@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, DestroyRef, inject } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { filter } from 'rxjs';
+import { WINDOW } from '@shared/injection-tokens';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +11,18 @@ import { Component } from '@angular/core';
     <router-outlet/>
   `
 })
-export class AppComponent {}
+export class AppComponent {
+
+  private router = inject(Router);
+  private window = inject(WINDOW);
+  private destroyRef = inject(DestroyRef);
+
+  constructor() {
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        takeUntilDestroyed(this.destroyRef)
+      ).subscribe(() => this.window.scrollTo(0,0));
+  }
+
+}
