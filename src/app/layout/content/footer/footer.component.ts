@@ -1,6 +1,6 @@
 import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 import { environment } from '@env';
-import { faInstagramSquare, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -18,6 +18,6 @@ export class FooterComponent {
 }
 
 const ICONS = {
-  whatsapp: faWhatsappSquare,
-  instagram: faInstagramSquare
+  whatsapp: faWhatsapp,
+  instagram: faInstagram
 }
