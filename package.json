@@ -6,7 +6,7 @@
     "start": "ng serve",
     "serve": "ng serve --configuration localhost",
     "build": "ng build",
-    "build-gh": "ng build --configuration production --base-href=\"./theaprado\"",
+    "build-gh": "ng build --configuration production --base-href=\"./\"",
     "lint": "ng lint",
     "test": "ng test"
   },
