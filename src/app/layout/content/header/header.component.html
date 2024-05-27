@@ -5,11 +5,11 @@
     </a>
   </div>
 
-  <a target="_blank" [href]="environment.instagramUrl" class="text-lowercase hover-underline">
+  <a target="_blank" [href]="environment.instagramUrl" class="instagram text-lowercase hover-underline">
     &#64;arquiteturatheaprado
   </a>
 
-  <nav class="fw-semibold">
+  <nav class="fw-semibold menu-desktop">
     <a class="hover-underline" [routerLink]="['/']">Projetos</a>
     <a class="hover-underline" [routerLink]="['/equipe']">Equipe</a>
     <a class="hover-underline" [routerLink]="['/espaco']">Espaço</a>
@@ -17,4 +17,18 @@
     <a class="hover-underline" [routerLink]="['/livro']">Livro</a>
     <a class="hover-underline" href="javascript:void(0)" (click)="goToFooter()">Contato</a>
   </nav>
+
+  <div ngbDropdown placement="bottom-end" class="menu-mobile">
+    <button type="button" class="btn" id="menuMobile" ngbDropdownToggle>
+      <fa-icon [icon]="icons.menu" size="2x" />
+    </button>
+    <div ngbDropdownMenu aria-labelledby="menuMobile">
+      <a ngbDropdownItem [routerLink]="['/']">Projetos</a>
+      <a ngbDropdownItem [routerLink]="['/equipe']">Equipe</a>
+      <a ngbDropdownItem [routerLink]="['/espaco']">Espaço</a>
+      <a ngbDropdownItem [routerLink]="['/servicos']">O que fazemos</a>
+      <a ngbDropdownItem [routerLink]="['/livro']">Livro</a>
+      <a ngbDropdownItem href="javascript:void(0)" (click)="goToFooter()">Contato</a>
+    </div>
+  </div>
 </header>

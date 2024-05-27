@@ -7,6 +7,7 @@ import { ContentRoutingModule } from './content-routing.module';
 import { ContentComponent } from './content.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     RouterModule,
     ContentRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbDropdownModule
   ]
 })
 export class ContentModule { }

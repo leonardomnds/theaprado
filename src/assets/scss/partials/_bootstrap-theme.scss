@@ -34,3 +34,8 @@ $modal-content-bg:                  #fff;
 
 /* List Group */
 $list-group-bg:                     #fff; /* <- Bug versão 5.2 */
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+}

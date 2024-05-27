@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostBinding, ViewEncapsulation, inject } from '@angular/core';
 import { environment } from '@env';
+import { faBars, faHamburger } from '@fortawesome/free-solid-svg-icons';
 import { SidebarService } from '@shared/services';
 
 @Component({
@@ -11,6 +12,7 @@ import { SidebarService } from '@shared/services';
 })
 export class HeaderComponent {
 
+  icons = ICONS;
   environment = environment;
 
   @HostBinding('class') elementClass = 'row g-0';
@@ -27,4 +29,8 @@ export class HeaderComponent {
     console.log('goto', this.document.querySelector('.site-footer'))
     this.document.querySelector('.site-footer')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
+}
+
+const ICONS = {
+  menu: faBars
 }
