@@ -1,0 +1,20 @@
+<header class="col">
+  <div class="logo-container">
+    <a [routerLink]="['/']">
+      <img src="/assets/images/logo.png" alt="Logo">
+    </a>
+  </div>
+
+  <a target="_blank" [href]="environment.instagramUrl" class="text-lowercase hover-underline">
+    &#64;arquiteturatheaprado
+  </a>
+
+  <nav class="fw-semibold">
+    <a class="hover-underline" [routerLink]="['/']">Projetos</a>
+    <a class="hover-underline" [routerLink]="['/equipe']">Equipe</a>
+    <a class="hover-underline" [routerLink]="['/espaco']">Espaço</a>
+    <a class="hover-underline" [routerLink]="['/servicos']">O que fazemos</a>
+    <a class="hover-underline" [routerLink]="['/livro']">Livro</a>
+    <a class="hover-underline" href="javascript:void(0)" (click)="goToFooter()">Contato</a>
+  </nav>
+</header>

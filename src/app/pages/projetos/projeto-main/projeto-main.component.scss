@@ -1,0 +1,12 @@
+.image-container {
+  min-height: 300px;
+
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+}

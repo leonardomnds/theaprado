@@ -1,0 +1,9 @@
+npm_audit:
+   stage: security
+   script: npm audit --audit-level=critical
+
+SAST_job:
+   stage: security
+   image: ${CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX}/opensecurity/njsscan:latest
+   before_script: []
+   script: njsscan .

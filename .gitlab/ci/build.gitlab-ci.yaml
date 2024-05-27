@@ -1,0 +1,32 @@
+.build:
+  stage: build
+  needs:
+    - test
+  script:
+    - node_modules/.bin/ng build --configuration $CI_ENVIRONMENT_NAME --aot
+    - mv $CI_PROJECT_DIR/dist/eugestor-reports $CI_PROJECT_DIR
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/eugestor-reports/
+
+build_dev:
+  extends: .build
+  environment:
+    name: dev
+  only:
+    - dev
+
+build_homo:
+  extends: .build
+  environment:
+    name: qa
+  only:
+    - homo
+
+build_prod:
+  extends: .build
+  when: manual
+  environment:
+    name: production
+  only:
+    - master
