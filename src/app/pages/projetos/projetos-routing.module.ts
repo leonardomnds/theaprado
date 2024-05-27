@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProjetosComponent } from './projetos.component';
-import { ProjetoDolceVittaComponent } from './projeto-dolce-vitta/projeto-dolce-vitta.component';
+import { ProjetoDetalhesComponent } from './projeto-detalhes/projeto-detalhes.component';
 import { ProjetoMainComponent } from './projeto-main/projeto-main.component';
 import { CustomData, TipoProjeto } from './types';
+
+const getImages = (lenght: number) => Array.from({ length: lenght + 1 }, () => 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg');
 
 const routes: Routes = [
   {
@@ -16,7 +18,7 @@ const routes: Routes = [
       },
       {
         path: 'dolce-vitta',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Dolce Vitta',
         data: {
           isProjetoArquitetonico: true,
@@ -24,24 +26,24 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2016,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(7)
         } as CustomData
       },
       {
         path: 'casa-das-papoulas',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Casa das Papoulas',
         data: {
           isProjetoArquitetonico: true,
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(5)
         } as CustomData
       },
       {
         path: 'a-primeira',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'A Primeira',
         data: {
           isProjetoArquitetonico: true,
@@ -49,47 +51,47 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2002,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(9)
         } as CustomData
       },
       {
         path: 'lola-kafe',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Lola Kafé',
         data: {
           isProjetoArquitetonico: true,
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2023,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(9)
         } as CustomData
       },
       {
         path: 'restaurante-pantanal',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Restaurante Pantanal - Toledo/PR',
         data: {
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2019,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(9)
         } as CustomData
       },
       {
         path: 'drei-schritte',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Drei Schritte',
         data: {
           isProjetoArquitetonico: true,
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2022,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(10)
         } as CustomData
       },
       {
         path: 'brisa-da-mata',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Brisa da Mata',
         data: {
           isProjetoArquitetonico: true,
@@ -97,46 +99,46 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2019,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(7)
         } as CustomData
       },
       {
         path: 'chale-do-campo',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Chalé do Campo',
         data: {
           isProjetoArquitetonico: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2021,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(6)
         } as CustomData
       },
       {
         path: 'edificio-aurelio',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Edifício Aurélio',
         data: {
           isProjetoArquitetonico: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2021,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(9)
         } as CustomData
       },
       {
-        path: 'centro-odontológico-lago',
-        component: ProjetoDolceVittaComponent,
+        path: 'centro-odontologico-lago',
+        component: ProjetoDetalhesComponent,
         title: 'Centro Odontológico Lago',
         data: {
           isProjetoArquitetonico: true,
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2019,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(10)
         } as CustomData
       },
       {
         path: 'casa-41',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Casa 41',
         data: {
           isProjetoArquitetonico: true,
@@ -144,34 +146,34 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2021,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(13)
         } as CustomData
       },
       {
         path: 'restaurante-pantanal-cascavel',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Restaurante Pantanal - Cascavel/PR',
         data: {
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2023,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(9)
         } as CustomData
       },
       {
         path: 'casa-alecrim',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Casa Alecrim',
         data: {
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2023,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(9)
         } as CustomData
       },
       {
         path: 'casa-country',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Casa do Country',
         data: {
           isProjetoArquitetonico: true,
@@ -179,68 +181,68 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2020,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(10)
         } as CustomData
       },
       {
         path: 'casa-rio',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Casa do Rio',
         data: {
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2022,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(9)
         } as CustomData
       },
       {
         path: 'ape-do-musico',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Apê do Músico',
         data: {
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2019,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(7)
         } as CustomData
       },
       {
         path: 'ape-downtown',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Apê Downtown',
         data: {
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2022,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(6)
         } as CustomData
       },
       {
         path: 'fixar',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Fixar - Propriedade Intelectual',
         data: {
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2022,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(6)
         } as CustomData
       },
       {
         path: 'vila-neoclassica',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Vila Neoclássica',
         data: {
           isProjetoArquitetonico: true,
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(7)
         } as CustomData
       },
       {
         path: 'my-way',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'My Way',
         data: {
           isProjetoArquitetonico: true,
@@ -248,12 +250,12 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(13)
         } as CustomData
       },
       {
         path: 'la-fontana',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'La Fontana',
         data: {
           isProjetoArquitetonico: true,
@@ -261,12 +263,12 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2006,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(7)
         } as CustomData
       },
       {
         path: 'casa-dos-porticos',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Casa dos Pórticos',
         data: {
           isProjetoArquitetonico: true,
@@ -274,24 +276,24 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2020,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(6)
         } as CustomData
       },
       {
         path: 'contemporanea',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Contemporânea',
         data: {
           isProjetoArquitetonico: true,
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2015,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(6)
         } as CustomData
       },
       {
         path: 'casa-das-palmeiras',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Casa das Palmeiras',
         data: {
           isProjetoArquitetonico: true,
@@ -299,12 +301,12 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2019,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(6)
         } as CustomData
       },
       {
         path: 'monumento-fundadores',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Monumento Fundadores',
         data: {
           isProjetoArquitetonico: true,
@@ -313,30 +315,30 @@ const routes: Routes = [
           isObraPublica: true,
           tipoProjeto: TipoProjeto.InstitucionalPublico,
           anoProjeto: 2011,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(3)
         } as CustomData
       },
       {
         path: 'academia-da-saude',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Academia da Saúde',
         data: {
           isProjetoArquitetonico: true,
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(3)
         } as CustomData
       },
       {
         path: 'rodoviaria',
-        component: ProjetoDolceVittaComponent,
+        component: ProjetoDetalhesComponent,
         title: 'Rodoviária',
         data: {
           isProjetoArquitetonico: true,
           tipoProjeto: TipoProjeto.Publico,
           anoProjeto: 2016,
-          image: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
+          images: getImages(3)
         } as CustomData
       }
     ]

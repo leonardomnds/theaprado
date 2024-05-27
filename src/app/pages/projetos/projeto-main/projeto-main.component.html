@@ -3,7 +3,7 @@
     <div class="col-12 col-md-6 col-lg-4">
       <a [routerLink]="['/projetos', projeto.path]">
         <div class="image-container h-100">
-          <img src="{{projeto.image}}" alt="{{projeto.nome}}">
+          <img src="{{projeto.images[0]}}" alt="{{projeto.nome}}">
           <div class="info">
             <span class="fw-semibold">{{projeto.nome}}</span>
           </div>

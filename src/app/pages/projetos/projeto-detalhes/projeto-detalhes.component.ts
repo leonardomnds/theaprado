@@ -1,13 +1,13 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CustomData, Projeto, TipoProjeto } from '@pages/projetos/types';
 
 @Component({
-  selector: 'app-projeto-header',
-  templateUrl: './projeto-header.component.html',
-  styleUrls: ['./projeto-header.component.scss']
+  selector: 'app-projeto-detalhes',
+  templateUrl: './projeto-detalhes.component.html',
+  styleUrls: ['./projeto-detalhes.component.scss'],
 })
-export class ProjetoHeaderComponent implements OnInit {
+export class ProjetoDetalhesComponent implements OnInit {
 
   projeto!: Projeto;
   TipoProjeto = TipoProjeto;
@@ -18,7 +18,7 @@ export class ProjetoHeaderComponent implements OnInit {
     const route = this.route.snapshot;
 
     this.projeto = {
-      path: '',
+      path: route.routeConfig?.path!,
       nome: route.title!,
       ...route.data as CustomData
     };

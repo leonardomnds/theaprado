@@ -6,7 +6,7 @@ export enum TipoProjeto {
 }
 
 export interface CustomData {
-  image: string;
+  images: string[];
   isProjetoArquitetonico?: boolean;
   isProjetoInteriores?: boolean;
   isProjetoPaisagismo?: boolean;
