@@ -1,0 +1,48 @@
+html, body {
+  height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  text-transform: uppercase;
+}
+
+// Scroll personalizado
+.styled-scroll-y {
+  $scrollbar-bg: rgba(0, 0, 0, 0.2);
+  $scrollbar-width: 8px;
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: calc($scrollbar-width / 2);
+    background: $scrollbar-bg;
+  }
+}
+
+.ng-dropdown-panel .scroll-host {
+  @extend .styled-scroll-y;
+}
+
+a,
+.btn.btn-link {
+  text-decoration: none;
+
+  &.hover-underline:hover {
+    text-decoration: underline;
+  }
+}
+
+// Containers das páginas
+.page-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
