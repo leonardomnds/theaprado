@@ -6,6 +6,7 @@ import { ProjetoDolceVittaComponent } from './projeto-dolce-vitta/projeto-dolce-
 import { ProjetoMainComponent } from './projeto-main/projeto-main.component';
 import { ProjetosRoutingModule } from './projetos-routing.module';
 import { ProjetosComponent } from './projetos.component';
+import { ProjetoHeaderModule } from '@components/index';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProjetosComponent } from './projetos.component';
   imports: [
     CommonModule,
     RouterModule,
+    ProjetoHeaderModule,
     ProjetosRoutingModule
   ]
 })

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SkeletonTableComponent } from './skeleton-table/skeleton-table.component';
+import { ProjetoHeaderComponent } from './projeto-header.component';
 
 const COMPONENTS = [
-  SkeletonTableComponent
+  ProjetoHeaderComponent
 ];
 
 @NgModule({
@@ -11,4 +11,4 @@ const COMPONENTS = [
   imports: [CommonModule],
   exports: COMPONENTS
 })
-export class SkeletonShapesModule { }
+export class ProjetoHeaderModule { }

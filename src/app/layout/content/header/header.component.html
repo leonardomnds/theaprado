@@ -10,11 +10,11 @@
   </a>
 
   <nav class="fw-semibold menu-desktop">
-    <a class="hover-underline" [routerLink]="['/']">Projetos</a>
-    <a class="hover-underline" [routerLink]="['/equipe']">Equipe</a>
-    <a class="hover-underline" [routerLink]="['/espaco']">Espaço</a>
-    <a class="hover-underline" [routerLink]="['/servicos']">O que fazemos</a>
-    <a class="hover-underline" [routerLink]="['/livro']">Livro</a>
+    <a class="hover-underline" routerLinkActive="active" [routerLink]="['/projetos']">Projetos</a>
+    <a class="hover-underline" routerLinkActive="active" [routerLink]="['/equipe']">Equipe</a>
+    <a class="hover-underline" routerLinkActive="active" [routerLink]="['/espaco']">Espaço</a>
+    <a class="hover-underline" routerLinkActive="active" [routerLink]="['/servicos']">O que fazemos</a>
+    <a class="hover-underline" routerLinkActive="active" [routerLink]="['/livro']">Livro</a>
     <a class="hover-underline" href="javascript:void(0)" (click)="goToFooter()">Contato</a>
   </nav>
 
@@ -23,7 +23,7 @@
       <fa-icon [icon]="icons.menu" size="2x" />
     </button>
     <div ngbDropdownMenu aria-labelledby="menuMobile">
-      <a ngbDropdownItem [routerLink]="['/']">Projetos</a>
+      <a ngbDropdownItem [routerLink]="['/projetos']">Projetos</a>
       <a ngbDropdownItem [routerLink]="['/equipe']">Equipe</a>
       <a ngbDropdownItem [routerLink]="['/espaco']">Espaço</a>
       <a ngbDropdownItem [routerLink]="['/servicos']">O que fazemos</a>

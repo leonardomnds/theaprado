@@ -1,21 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CustomData, Projeto } from '@pages/projetos/types';
 
 @Component({
   selector: 'app-projeto-main',
   templateUrl: './projeto-main.component.html',
   styleUrls: ['./projeto-main.component.scss'],
 })
-export class ProjetoMainComponent {
+export class ProjetoMainComponent implements OnInit {
 
-  projetos: Projeto[] = Array.from({ length: 27 }, () => ({
-    route: '1',
-    imageURL: 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg'
-  }));
+  projetos: Projeto[] = [];
 
-}
+  private route = inject(ActivatedRoute);
 
-interface Projeto {
-  imageURL: string;
-  route: string;
+  ngOnInit(): void {
+    const projetosRoutes = this.route.parent?.snapshot?.routeConfig?.children ?? [];
+
+    this.projetos = projetosRoutes
+      .filter((route) => route.path)
+      .map((route) => ({
+        path: route.path!,
+        nome: `${route.title}`,
+        ...route.data as CustomData,
+      }));
+
+  }
 }
 

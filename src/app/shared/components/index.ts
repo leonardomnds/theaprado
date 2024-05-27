@@ -1,1 +1,1 @@
-export * from './skeleton-shapes/skeleton-shapes.module';
+export * from './projeto-header/projeto-header.module';

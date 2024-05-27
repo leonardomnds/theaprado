@@ -21,6 +21,10 @@ header nav {
   gap: 24px;
   font-size: 20px;
   text-transform: uppercase;
+
+  .active {
+    color: var(--primary);
+  }
 }
 
 .menu-mobile {

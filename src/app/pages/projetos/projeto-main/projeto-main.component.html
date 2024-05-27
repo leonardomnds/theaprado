@@ -1,9 +1,12 @@
 <div class="row g-4">
   <ng-container *ngFor="let projeto of projetos">
     <div class="col-12 col-md-6 col-lg-4">
-      <a [routerLink]="['/projetos', projeto.route]">
+      <a [routerLink]="['/projetos', projeto.path]">
         <div class="image-container h-100">
-          <img src="{{projeto.imageURL}}" alt="{{projeto.route}}">
+          <img src="{{projeto.image}}" alt="{{projeto.nome}}">
+          <div class="info">
+            <span class="fw-semibold">{{projeto.nome}}</span>
+          </div>
         </div>
       </a>
     </div>
