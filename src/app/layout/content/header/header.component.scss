@@ -48,7 +48,7 @@ header nav {
 
 @include media-breakpoint-down(lg) {
   .instagram {
-    display: none;
+    flex-grow: 1;
   }
 
   header {
