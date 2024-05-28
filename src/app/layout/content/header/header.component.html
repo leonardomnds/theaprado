@@ -16,7 +16,7 @@
     <a class="hover-underline" routerLinkActive="active" [routerLink]="['/espaco']">Espaço</a>
     <a class="hover-underline" routerLinkActive="active" [routerLink]="['/servicos']">O que fazemos</a>
     <a class="hover-underline" routerLinkActive="active" [routerLink]="['/livro']">Livro</a>
-    <a class="hover-underline" href="javascript:void(0)" (click)="goToFooter()">Contato</a>
+    <span class="hover-underline cursor" (click)="goToFooter()">Contato</span>
   </nav>
 
   <div ngbDropdown placement="bottom-end" class="menu-mobile">
@@ -29,7 +29,7 @@
       <a ngbDropdownItem [routerLink]="['/espaco']">Espaço</a>
       <a ngbDropdownItem [routerLink]="['/servicos']">O que fazemos</a>
       <a ngbDropdownItem [routerLink]="['/livro']">Livro</a>
-      <a ngbDropdownItem href="javascript:void(0)" (click)="goToFooter()">Contato</a>
+      <button ngbDropdownItem (click)="goToFooter()">Contato</button>
     </div>
   </div>
 </header>
