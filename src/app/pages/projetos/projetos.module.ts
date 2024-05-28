@@ -6,6 +6,7 @@ import { ProjetoDetalhesComponent } from './projeto-detalhes/projeto-detalhes.co
 import { ProjetoMainComponent } from './projeto-main/projeto-main.component';
 import { ProjetosRoutingModule } from './projetos-routing.module';
 import { ProjetosComponent } from './projetos.component';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProjetosComponent } from './projetos.component';
   imports: [
     CommonModule,
     RouterModule,
+    NgbTooltipModule,
     ProjetosRoutingModule
   ]
 })

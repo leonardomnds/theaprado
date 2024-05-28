@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { filter, map, mergeMap, of } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
+import { NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -16,8 +17,12 @@ export class AppComponent {
   private document = inject(DOCUMENT);
   private route = inject(ActivatedRoute);
   private destroyRef = inject(DestroyRef);
+  private tooltipConfig = inject(NgbTooltipConfig);
 
   constructor() {
+    this.tooltipConfig.container = 'body';
+    this.tooltipConfig.placement = ['bottom', 'top'];
+
     this.router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
