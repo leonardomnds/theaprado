@@ -1,8 +1,7 @@
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { RouterModule, TitleStrategy } from '@angular/router';
-import { WINDOW } from '@shared/injection-tokens';
 import { PageTitleService } from '@shared/services';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,10 +28,10 @@ registerLocaleData(localeBr, 'pt', localeBrExtra);
   ],
   providers: [
     NgbActiveModal,
-    { provide: WINDOW, useValue: window },
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
     { provide: TitleStrategy, useClass: PageTitleService },
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })
