@@ -5,7 +5,7 @@ import { ProjetoDetalhesComponent } from './projeto-detalhes/projeto-detalhes.co
 import { ProjetoMainComponent } from './projeto-main/projeto-main.component';
 import { CustomData, TipoProjeto } from './types';
 
-const getImages = (lenght: number) => Array.from({ length: lenght + 1 }, () => 'https://images.adsttc.com/media/images/64f0/f509/9e3f/b901/7c1c/1751/newsletter/casa-do-cerrado-ser-arquitetos_12.jpg');
+const getImages = (lenght: number, image: string) => Array.from({ length: lenght + 1 }, () => `/assets/images/${image}-min.webp`);
 
 const routes: Routes = [
   {
@@ -26,7 +26,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2016,
-          images: getImages(7)
+          images: getImages(7, '01')
         } as CustomData
       },
       {
@@ -38,7 +38,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          images: getImages(5)
+          images: getImages(5, '02')
         } as CustomData
       },
       {
@@ -51,7 +51,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2002,
-          images: getImages(9)
+          images: getImages(9, '03')
         } as CustomData
       },
       {
@@ -63,7 +63,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2023,
-          images: getImages(9)
+          images: getImages(9, '04')
         } as CustomData
       },
       {
@@ -74,7 +74,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2019,
-          images: getImages(9)
+          images: getImages(9, '05')
         } as CustomData
       },
       {
@@ -86,7 +86,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2022,
-          images: getImages(10)
+          images: getImages(10, '06')
         } as CustomData
       },
       {
@@ -99,7 +99,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2019,
-          images: getImages(7)
+          images: getImages(7, '07')
         } as CustomData
       },
       {
@@ -110,7 +110,7 @@ const routes: Routes = [
           isProjetoArquitetonico: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2021,
-          images: getImages(6)
+          images: getImages(6, '08')
         } as CustomData
       },
       {
@@ -121,7 +121,7 @@ const routes: Routes = [
           isProjetoArquitetonico: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2021,
-          images: getImages(9)
+          images: getImages(9, '09')
         } as CustomData
       },
       {
@@ -133,7 +133,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2019,
-          images: getImages(10)
+          images: getImages(10, '10')
         } as CustomData
       },
       {
@@ -146,7 +146,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2021,
-          images: getImages(13)
+          images: getImages(13, '11')
         } as CustomData
       },
       {
@@ -157,7 +157,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2023,
-          images: getImages(9)
+          images: getImages(9, '12')
         } as CustomData
       },
       {
@@ -168,7 +168,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2023,
-          images: getImages(9)
+          images: getImages(9, '13')
         } as CustomData
       },
       {
@@ -181,7 +181,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2020,
-          images: getImages(10)
+          images: getImages(10, '14')
         } as CustomData
       },
       {
@@ -192,7 +192,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2022,
-          images: getImages(9)
+          images: getImages(9, '15')
         } as CustomData
       },
       {
@@ -203,7 +203,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2019,
-          images: getImages(7)
+          images: getImages(7, '16')
         } as CustomData
       },
       {
@@ -214,7 +214,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2022,
-          images: getImages(6)
+          images: getImages(6, '17')
         } as CustomData
       },
       {
@@ -225,7 +225,7 @@ const routes: Routes = [
           isProjetoInteriores: true,
           tipoProjeto: TipoProjeto.Comercial,
           anoProjeto: 2022,
-          images: getImages(6)
+          images: getImages(6, '18')
         } as CustomData
       },
       {
@@ -237,7 +237,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          images: getImages(7)
+          images: getImages(7, '19')
         } as CustomData
       },
       {
@@ -250,7 +250,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          images: getImages(13)
+          images: getImages(13, '20')
         } as CustomData
       },
       {
@@ -263,7 +263,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2006,
-          images: getImages(7)
+          images: getImages(7, '21')
         } as CustomData
       },
       {
@@ -276,7 +276,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2020,
-          images: getImages(6)
+          images: getImages(6, '22')
         } as CustomData
       },
       {
@@ -288,7 +288,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2015,
-          images: getImages(6)
+          images: getImages(6, '23')
         } as CustomData
       },
       {
@@ -301,7 +301,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2019,
-          images: getImages(6)
+          images: getImages(6, '24')
         } as CustomData
       },
       {
@@ -315,7 +315,7 @@ const routes: Routes = [
           isObraPublica: true,
           tipoProjeto: TipoProjeto.InstitucionalPublico,
           anoProjeto: 2011,
-          images: getImages(3)
+          images: getImages(3, '25')
         } as CustomData
       },
       {
@@ -327,7 +327,7 @@ const routes: Routes = [
           isProjetoPaisagismo: true,
           tipoProjeto: TipoProjeto.Residencial,
           anoProjeto: 2011,
-          images: getImages(3)
+          images: getImages(3, '26')
         } as CustomData
       },
       {
@@ -338,7 +338,7 @@ const routes: Routes = [
           isProjetoArquitetonico: true,
           tipoProjeto: TipoProjeto.Publico,
           anoProjeto: 2016,
-          images: getImages(3)
+          images: getImages(3, '27')
         } as CustomData
       }
     ]
