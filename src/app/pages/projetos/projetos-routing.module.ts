@@ -5,7 +5,7 @@ import { ProjetoDetalhesComponent } from './projeto-detalhes/projeto-detalhes.co
 import { ProjetoMainComponent } from './projeto-main/projeto-main.component';
 import { CustomData, TipoProjeto } from './types';
 
-const getImages = (lenght: number, image: string) => Array.from({ length: lenght + 1 }, () => `/assets/images/${image}-min.webp`);
+const getImages = (lenght: number, image: string) => Array.from({ length: lenght + 1 }, () => `assets/images/${image}-min.webp`);
 
 const routes: Routes = [
   {
