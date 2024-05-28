@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/theaprado/browser",
+            "outputPath": "dist/browser",
+            "baseHref": "/theaprado/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -100,7 +101,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/theaprado/server",
+            "outputPath": "dist/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -153,11 +154,13 @@
           "configurations": {
             "production": {
               "browserTarget": "theaprado:build:production",
-              "serverTarget": "theaprado:server:production"
+              "serverTarget": "theaprado:server:production",
+              "discoverRoutes": true
             },
             "development": {
               "browserTarget": "theaprado:build:development",
-              "serverTarget": "theaprado:server:development"
+              "serverTarget": "theaprado:server:development",
+              "discoverRoutes": true
             }
           },
           "defaultConfiguration": "production"

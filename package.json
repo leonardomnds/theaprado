@@ -5,15 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "serve": "ng serve --configuration localhost",
-    "build": "ng build",
-    "build-gh": "ng build --configuration production --base-href=\"/theaprado/\"",
-    "deploy": "angular-cli-ghpages --dir=dist/browser",
+    "build": "ng build --configuration production --base-href=\"/theaprado/\"",
     "lint": "ng lint",
     "test": "ng test",
     "dev:ssr": "ng run theaprado:serve-ssr",
     "serve:ssr": "node dist/theaprado/server/main.js",
     "build:ssr": "ng build && ng run theaprado:server",
-    "prerender": "ng run theaprado:prerender --routes-file routes.txt"
+    "prerender": "ng run theaprado:prerender",
+    "deploy": "ng run theaprado:prerender && angular-cli-ghpages --dir=dist/browser --branch=gh-pages"
   },
   "private": true,
   "dependencies": {
