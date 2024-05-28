@@ -56,3 +56,15 @@ a,
   align-items: center;
   justify-content: center;
 }
+
+.tooltip {
+  font-weight: 500 !important;
+
+  &.bs-tooltip-top {
+    margin-bottom: -8px !important;
+  }
+
+  &.bs-tooltip-bottom {
+    margin-top: -8px !important;
+  }
+}

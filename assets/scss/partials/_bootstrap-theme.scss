@@ -23,7 +23,8 @@ $theme-colors: (
 $link-color:                        $body-color !default;
 
 /* Tooltip */
-$tooltip-bg:                        $secondary;
+$tooltip-bg:                        $primary;
+$tooltip-max-width:                 400px;
 
 
 /* Card */
