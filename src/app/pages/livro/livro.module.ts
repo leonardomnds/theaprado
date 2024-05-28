@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LivroRoutingModule } from './livro-routing.module';
 import { LivroComponent } from './livro.component';
 import { RouterModule } from '@angular/router';
+import { DirectivesModule } from '@shared/directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
+    DirectivesModule,
     LivroRoutingModule,
   ]
 })

@@ -7,6 +7,7 @@ import { ProjetoMainComponent } from './projeto-main/projeto-main.component';
 import { ProjetosRoutingModule } from './projetos-routing.module';
 import { ProjetosComponent } from './projetos.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { DirectivesModule } from '@shared/directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     RouterModule,
     NgbTooltipModule,
+    DirectivesModule,
     ProjetosRoutingModule
   ]
 })
