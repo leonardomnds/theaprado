@@ -5,7 +5,7 @@ html, body {
 }
 
 * {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 // Scroll personalizado
@@ -34,10 +34,14 @@ html, body {
 a,
 .btn.btn-link {
   text-decoration: none;
+}
 
-  &.hover-underline:hover {
-    text-decoration: underline;
-  }
+.cursor {
+  cursor: pointer;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
 }
 
 // Containers das páginas
