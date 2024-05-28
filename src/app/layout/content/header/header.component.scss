@@ -48,12 +48,13 @@ header nav {
 
 @include media-breakpoint-down(lg) {
   .instagram {
-    flex-grow: 1;
+    display: none;
   }
 
   header {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: -24px !important;
   }
 
   .logo-container img {
@@ -68,3 +69,4 @@ header nav {
     display: none;
   }
 }
+

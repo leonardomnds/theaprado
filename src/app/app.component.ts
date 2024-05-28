@@ -3,7 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { filter, map, mergeMap, of } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
-import { NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownConfig, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +18,10 @@ export class AppComponent {
   private route = inject(ActivatedRoute);
   private destroyRef = inject(DestroyRef);
   private tooltipConfig = inject(NgbTooltipConfig);
+  private dropdownConfig = inject(NgbDropdownConfig);
 
   constructor() {
+    this.dropdownConfig.container = 'body';
     this.tooltipConfig.container = 'body';
     this.tooltipConfig.placement = ['bottom', 'top', 'bottom-right', 'bottom-left', 'top-right', 'top-left'];
 

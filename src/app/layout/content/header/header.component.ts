@@ -1,7 +1,8 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, HostBinding, ViewEncapsulation, inject } from '@angular/core';
+import { Component, HostBinding, HostListener, ViewChild, ViewEncapsulation, inject } from '@angular/core';
 import { environment } from '@env';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -15,11 +16,19 @@ export class HeaderComponent {
   environment = environment;
 
   @HostBinding('class') elementClass = 'row g-0';
+  @ViewChild(NgbDropdown, { static: true})
+  private menuToggle!: NgbDropdown;
 
   private document = inject(DOCUMENT);
 
   goToFooter(): void {
     this.document.querySelector('.site-footer')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  @HostListener('window:scroll')
+  @HostListener('window:resize')
+  onWindowEvent(): void {
+    this.menuToggle.close();
   }
 }
 
