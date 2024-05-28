@@ -1,7 +1,7 @@
 <div class="row g-4">
   <ng-container *ngFor="let projeto of projetos">
     <div class="col-6 col-sm-4">
-      <a [routerLink]="['/projetos', projeto.path]">
+      <a [routerLink]="['/', projeto.path]">
         <figure>
           <img src="{{projeto.images[0]}}" alt="{{projeto.nome}}">
         </figure>

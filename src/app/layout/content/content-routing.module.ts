@@ -8,15 +8,6 @@ const routes: Routes = [
     component: ContentComponent,
     children: [
       {
-        path: '',
-        redirectTo: 'projetos',
-        pathMatch: 'full',
-      },
-      {
-        path: 'projetos',
-        loadChildren: () => import('@pages/projetos/projetos.module').then((m) => m.ProjetosModule),
-      },
-      {
         path: 'espaco',
         loadChildren: () => import('@pages/espaco/espaco.module').then((m) => m.EspacoModule),
         title: 'Espaço'
@@ -37,8 +28,12 @@ const routes: Routes = [
         title: 'Livro'
       },
       {
+        path: '',
+        loadChildren: () => import('@pages/projetos/projetos.module').then((m) => m.ProjetosModule),
+      },
+      {
         path: '**',
-        redirectTo: 'projetos',
+        redirectTo: '',
         pathMatch: 'full'
       },
     ]
