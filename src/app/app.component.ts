@@ -21,7 +21,7 @@ export class AppComponent {
 
   constructor() {
     this.tooltipConfig.container = 'body';
-    this.tooltipConfig.placement = ['bottom', 'top'];
+    this.tooltipConfig.placement = ['bottom', 'top', 'bottom-right', 'bottom-left', 'top-right', 'top-left'];
 
     this.router.events
       .pipe(
