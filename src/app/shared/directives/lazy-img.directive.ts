@@ -7,10 +7,10 @@ export class LazyImgDirective implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     const imgElement = this.elementRef.nativeElement;
-    const originalSrc = imgElement.src;
+    const originalSrc = imgElement.src || imgElement.getAttribute(DATA_SRC_ATTRIBUTE)!;
 
     imgElement.classList.remove(LOADED_CLASS);
-    imgElement.setAttribute('data-src', originalSrc);
+    imgElement.setAttribute(DATA_SRC_ATTRIBUTE, originalSrc);
     imgElement.setAttribute('src', 'assets/images/placeholder.png');
   }
 
@@ -19,7 +19,7 @@ export class LazyImgDirective implements OnInit, AfterViewInit {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          const src = img.getAttribute('data-src');
+          const src = img.getAttribute(DATA_SRC_ATTRIBUTE);
 
           if (src) {
             img.setAttribute('src', src);
@@ -37,3 +37,4 @@ export class LazyImgDirective implements OnInit, AfterViewInit {
 }
 
 const LOADED_CLASS = 'loaded';
+const DATA_SRC_ATTRIBUTE = 'data-src';
